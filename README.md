@@ -12,7 +12,6 @@ Currently a work in progress. Version 0.1.0 should release sometime Spring 2023.
 - Main Repository - You're here!!!
 - [Trello](https://trello.com/b/HhGaZyTT/rpi-food-finder) - See what the devs are up to!
 - Discord Server - We don't have one yet :(
-- 
 
 ## Getting Involved
 If you would like to contribute head over to our [wiki](https://github.com/RPI-Food-Finder/RPIFoodFinder/wiki).

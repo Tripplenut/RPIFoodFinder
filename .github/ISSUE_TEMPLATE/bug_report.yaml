@@ -8,7 +8,7 @@ body:
     attributes:
       label: "Describe the Bug"
       description: "A clear and concise description of what the bug is."
-      placeholder: "If your issue relates to a operating system, make sure to remember to add the corresponding label to the issue."
+      placeholder: "If your issue relates to a operating system, make sure to add the corresponding label to the issue."
     validations:
       required: true
   - type: textarea
@@ -39,14 +39,6 @@ body:
     validations:
       required: false
   - type: textarea
-    id: files
-    attributes:
-      label: "Puzzle Files"
-      description: "If applicable, add any puzzle files to help explain your problem."
-      placeholder: You will need to zip up the puzzle files before you can attach them to your issue.
-    validations:
-      required: false
-  - type: textarea
     id: additional_context
     attributes:
       label: "Additional Context"
@@ -60,3 +52,5 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report.
+        Don't forget to add the corresponding labels relating to this issue.
+        RPI Food Finder. A [Rensselaer Center for Open Source](https://new.rcos.io/) project. 

@@ -6,7 +6,7 @@ body:
   - type: textarea
     id: question_description
     attributes:
-      label: "Question
+      label: "Question"
       description: "Where you put the question you have."
       placeholder: "Ex. I have a question about [...]"
     validations:

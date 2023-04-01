@@ -9,21 +9,22 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: MainAppBar());
+    return const MaterialApp(home: AppHome());
   }
 }
 
-class MainAppBar extends StatelessWidget {
-  const MainAppBar({super.key});
-
+class AppHome extends StatelessWidget {
+  const AppHome({super.key});
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      initialIndex: 1,
-      length: 3,
+      initialIndex: 0,
+      length: 4,
       child: Scaffold(
           appBar: AppBar(
-            title: const Text("RPI Food Finder"),
+            title: const Center(
+              child: Text("RPI Food Finder"),
+            ),
             bottom: const TabBar(tabs: <Widget>[
               Tab(
                 text: "Commons",

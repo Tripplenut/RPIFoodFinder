@@ -1,5 +1,5 @@
-name: src
-description: A new Flutter project.
+name: rpi_food_finder
+description: A way for RPI Students to find food on campus.
 publish_to: 'none'
 version: 0.1.0
 

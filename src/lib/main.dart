@@ -12,7 +12,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       home: const AppHome(),
       theme: ThemeData(
-        brightness: Brightness.dark,
+        //brightness: Brightness.dark, Dark Mode stuff. Implement in setting later
         primaryColor: Colors.red[300],
       ),
     );
@@ -29,9 +29,9 @@ class AppHome extends StatelessWidget {
       length: 4,
       child: Scaffold(
         appBar: AppBar(
-          title: const Center(
-            child: Text("RPI Food Finder"),
-          ),
+          title: const Text("RPI Food Finder"),
+          centerTitle: true,
+          backgroundColor: Colors.red[300],
           bottom: const TabBar(tabs: <Widget>[
             Tab(
               text: "Commons",
@@ -48,27 +48,32 @@ class AppHome extends StatelessWidget {
           ]),
         ),
         drawer: Drawer(
-          child: ListView(children: const <Widget>[
-            ListTile(
-              leading: IconButton(
-                onPressed: null,
-                icon: Icon(Icons.menu_book),
-              ),
-              title: Text('Menus'),
+          child: ListView(padding: EdgeInsets.zero, children: <Widget>[
+            const DrawerHeader(
+              child: Center(child: Text("RPI Food Finder!")),
             ),
             ListTile(
-              leading: IconButton(
-                onPressed: null,
-                icon: Icon(Icons.info),
-              ),
-              title: Text('About'),
+              leading: const Icon(Icons.menu_book),
+              title: const Text("Menus"),
+              onTap: () {
+                //! Add some navigator stuff here to go to other pages and things of that nature
+                //! When the time comes of course
+                Navigator.pop(context);
+              },
             ),
             ListTile(
-              leading: IconButton(
-                onPressed: null,
-                icon: Icon(Icons.settings),
-              ),
-              title: Text('Settings'),
+              leading: const Icon(Icons.info),
+              title: const Text('About'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.settings),
+              title: const Text('Settings'),
+              onTap: () {
+                Navigator.pop(context);
+              },
             ),
           ]),
         ),

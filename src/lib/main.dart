@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'MenuPage.dart';
+import 'AboutPage.dart';
+import 'SettingsPage.dart';
 
 void main() {
   runApp(const MainApp());
@@ -13,10 +16,32 @@ class MainApp extends StatelessWidget {
       home: const AppHome(),
       theme: ThemeData(
         //brightness: Brightness.dark, Dark Mode stuff. Implement in setting later
-        primaryColor: Colors.red[300],
+        primaryColor: Colors.red[600],
       ),
     );
   }
+}
+
+PreferredSizeWidget mainAppBar() {
+  return AppBar(
+    title: const Text("RPI Food Finder"),
+    centerTitle: true,
+    backgroundColor: Colors.red[300],
+    bottom: const TabBar(tabs: <Widget>[
+      Tab(
+        text: "Commons",
+      ),
+      Tab(
+        text: "Sage",
+      ),
+      Tab(
+        text: "BARH",
+      ),
+      Tab(
+        text: "Blitman",
+      )
+    ]),
+  );
 }
 
 class AppHome extends StatelessWidget {
@@ -28,25 +53,7 @@ class AppHome extends StatelessWidget {
       initialIndex: 0,
       length: 4,
       child: Scaffold(
-        appBar: AppBar(
-          title: const Text("RPI Food Finder"),
-          centerTitle: true,
-          backgroundColor: Colors.red[300],
-          bottom: const TabBar(tabs: <Widget>[
-            Tab(
-              text: "Commons",
-            ),
-            Tab(
-              text: "Sage",
-            ),
-            Tab(
-              text: "BARH",
-            ),
-            Tab(
-              text: "Blitman",
-            )
-          ]),
-        ),
+        appBar: mainAppBar(),
         drawer: Drawer(
           child: ListView(padding: EdgeInsets.zero, children: <Widget>[
             const DrawerHeader(

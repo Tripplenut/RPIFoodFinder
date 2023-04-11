@@ -3,9 +3,6 @@ import 'package:flutter/material.dart';
 
 // Our Files
 import 'menu_page.dart';
-import 'about_page.dart';
-import 'settings_page.dart';
-import 'reusable_widgets.dart';
 
 /// The app starts running here!
 void main() {

@@ -1,28 +1,34 @@
 import 'package:flutter/material.dart';
+import 'menu_page.dart';
+import 'settings_page.dart';
+import 'about_page.dart';
 
 /// This was really just a test to see if an app bar can be a standalone
 /// widget which is true but because of the tab functionality this
 /// will probably end up being the menu app bar which you can find
 /// in its respective file. When the time comes that is.
-PreferredSizeWidget mainAppBar() {
+/// [tabBarEnb] bool the shows the tab bar
+PreferredSizeWidget mainAppBar(bool tabBarEnb) {
   return AppBar(
     title: const Text("RPI Food Finder"),
     centerTitle: true,
     backgroundColor: Colors.red[300],
-    bottom: const TabBar(tabs: <Widget>[
-      Tab(
-        text: "Commons",
-      ),
-      Tab(
-        text: "Sage",
-      ),
-      Tab(
-        text: "BARH",
-      ),
-      Tab(
-        text: "Blitman",
-      )
-    ]),
+    bottom: tabBarEnb
+        ? const TabBar(tabs: <Widget>[
+            Tab(
+              text: "Commons",
+            ),
+            Tab(
+              text: "Sage",
+            ),
+            Tab(
+              text: "BARH",
+            ),
+            Tab(
+              text: "Blitman",
+            )
+          ])
+        : null,
   );
 }
 
@@ -41,23 +47,33 @@ Widget mainDrawer(BuildContext context) {
         leading: const Icon(Icons.menu_book),
         title: const Text("Menus"),
         onTap: () {
-          //! Add some navigator stuff here to go to other pages and things of that nature
-          //! When the time comes of course
-          Navigator.pop(context);
+          Navigator.pop(context); // Closes Drawer
+          Navigator.pop(context); // Closes Current Page
+          Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => const MenuPage()),
+          ); // Opens Menu Page
         },
       ),
       ListTile(
         leading: const Icon(Icons.info),
         title: const Text('About'),
         onTap: () {
-          Navigator.pop(context);
+          Navigator.pop(context); // Closes Drawer
+          Navigator.pop(context); // Closes Current Page
+          Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => const AboutPage()),
+          );
         },
       ),
       ListTile(
         leading: const Icon(Icons.settings),
         title: const Text('Settings'),
         onTap: () {
-          Navigator.pop(context);
+          Navigator.pop(context); // Closes Drawer
+          Navigator.pop(context); // Closes Current Page
+          Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => const SettingsPage()),
+          ); // Opens Settings Page
         },
       ),
     ]),

@@ -1,3 +1,3 @@
-# src
+# Food Finder Flutter
 
-A new Flutter project.
+Nothing for now

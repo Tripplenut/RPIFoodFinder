@@ -14,7 +14,7 @@ class MenuPage extends StatelessWidget {
       initialIndex: 0,
       length: 4,
       child: Scaffold(
-        appBar: mainAppBar(),
+        appBar: mainAppBar(true),
         drawer: mainDrawer(context), // Reusable Drawer
         body: const TabBarView(children: <Widget>[
           //! This section will soon contain accordion buttons

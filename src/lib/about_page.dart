@@ -4,10 +4,16 @@ import 'package:flutter/material.dart';
 // Our Files
 import 'reusable_widgets.dart';
 
-/// The Settings Page and all its wonderful contents
-class AboutPage extends StatelessWidget {
+// The About Page and all its wonderful contents
+class AboutPage extends StatefulWidget {
   const AboutPage({super.key});
 
+  @override
+  State<AboutPage> createState() => _AboutPageState();
+}
+
+// About Page State
+class _AboutPageState extends State<AboutPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

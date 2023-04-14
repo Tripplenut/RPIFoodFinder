@@ -12,7 +12,7 @@ PreferredSizeWidget mainAppBar(bool tabBarEnb) {
   return AppBar(
     title: const Text("RPI Food Finder"),
     centerTitle: true,
-    backgroundColor: Colors.red[300],
+    //backgroundColor: Colors.red[300],
     bottom: tabBarEnb
         ? const TabBar(tabs: <Widget>[
             Tab(

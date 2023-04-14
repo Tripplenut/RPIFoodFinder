@@ -4,10 +4,16 @@ import 'package:flutter/material.dart';
 // Our Files
 import 'reusable_widgets.dart';
 
-/// The Menu Page and all its wonderful contents
-class MenuPage extends StatelessWidget {
+// The Menu Page and all its wonderful contents
+class MenuPage extends StatefulWidget {
   const MenuPage({super.key});
 
+  @override
+  State<MenuPage> createState() => _MenuPageState();
+}
+
+// Menu Page State
+class _MenuPageState extends State<MenuPage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(

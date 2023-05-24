@@ -1,5 +1,6 @@
 // Flutter Files
 import 'package:flutter/material.dart';
+import 'package:ionicons/ionicons.dart'; // Custom Icons
 import 'package:rpi_food_finder/main.dart';
 
 // Our Files
@@ -16,16 +17,25 @@ class SettingsPage extends StatefulWidget {
 }
 
 class _SettingsPageState extends State<SettingsPage> {
+  bool darkMode = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: mainAppBar(false),
       drawer: mainDrawer(context),
-      body: ListView(children: const <Widget>[
+      body: ListView(children: <Widget>[
         SwitchListTile(
-          title: Text("Dark Mode"),
-          value: false,
-          onChanged: null,
+          title: const Text("Dark Mode"),
+          secondary: (darkMode)
+              ? const Icon(Ionicons.moon)
+              : const Icon(Ionicons.sunny),
+          value: darkMode,
+          onChanged: (bool value) {
+            setState(() {
+              darkMode = !darkMode;
+            });
+          },
           activeTrackColor: Colors.blue,
         ),
       ]),

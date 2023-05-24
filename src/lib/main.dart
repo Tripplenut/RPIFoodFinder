@@ -22,7 +22,7 @@ class MainApp extends StatefulWidget {
 
 // The State of the Main App
 class _MainAppState extends State<MainApp> {
-  ThemeMode curTheme = ThemeMode.light;
+  ThemeMode curTheme = ThemeMode.dark;
 
   @override
   Widget build(BuildContext context) {

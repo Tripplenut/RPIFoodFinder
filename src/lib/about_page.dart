@@ -95,7 +95,9 @@ class _AboutPageState extends State<AboutPage> {
         ListTile(
           // RCOS
           contentPadding: const EdgeInsets.only(top: 20, left: 20, right: 20),
-          // leading: Icon(), //! Add RCOS logo as svg icon and add as an icon
+          leading: const Image(
+              image: AssetImage(
+                  'assets/rcos.png')), //! Add RCOS logo as svg icon and add as an icon
           title: const Text("A Rensselaer Center for Open Source Project"),
           subtitle: const Text("Click me!"),
           onTap: () async {

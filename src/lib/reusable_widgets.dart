@@ -14,7 +14,7 @@ PreferredSizeWidget mainAppBar(bool tabBarEnb) {
     centerTitle: true,
     //backgroundColor: Colors.red[300],
     bottom: tabBarEnb
-        ? const TabBar(tabs: <Widget>[
+        ? const TabBar(indicatorColor: Colors.red, tabs: <Widget>[
             Tab(
               text: "Commons",
             ),

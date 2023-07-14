@@ -5,7 +5,7 @@ The main repository for RPI Food Finder
 A way for Rensselaer Polytechnic Institute students to see their dining options in an easier way.
 
 **Status:**
-Currently a work in progress. Version 0.1.0 should release sometime Spring 2023.
+Currently a work in progress. Should release sometime December 2023.
 
 **Links:**
 
